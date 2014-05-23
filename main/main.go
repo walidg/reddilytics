@@ -18,6 +18,6 @@ func main() {
 		fmt.Println("\n--------------------------------------\n")
 
 		//how often?
-		time.Sleep(time.Hour * 24)
+		time.Sleep(time.Hour * 1)
 	}
 }
