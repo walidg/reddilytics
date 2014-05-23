@@ -24,7 +24,7 @@ func Save(sr *Subreddit) error {
 // dials the database, returning any error
 func SetupDB() error {
 	var err error
-	DB, err = sql.Open("postgres", "user=postgres password=password dbname=reddimedia sslmode=disable")
+	DB, err = sql.Open("postgres", "user=postgres password=password dbname=languages sslmode=disable")
 
 	return err
 }

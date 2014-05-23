@@ -23,8 +23,35 @@ type SubredditData struct {
 // returns list of subreddits to watch
 func GetSubreddits() []Subreddit {
 	names := [...]string{
+		"actionscript",
+		"asm",
+		"c_programming",
+		"cobol",
+		"cpp",
+		"csharp",
+		"d_language",
+		"delphi",
+		"dotnet",
+		"fortran",
+		"fsharp",
 		"golang",
-		// ... intentionally a slice to add more later
+		"haskell",
+		"iosprogramming",
+		"java",
+		"javascript",
+		"julia",
+		"lisp",
+		"lua",
+		"matlab",
+		"pascal",
+		"perl",
+		"php",
+		"postscript",
+		"python",
+		"ruby",
+		"scala",
+		"sql",
+		"visualbasic",
 	}
 
 	subreddits := []Subreddit{}
