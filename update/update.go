@@ -6,6 +6,7 @@ import (
 	"github.com/steaz/reddilytics/model"
 	"io/ioutil"
 	"net/http"
+	"time"
 )
 
 // mines the data from the reddit API and calls save
@@ -39,5 +40,8 @@ func UpdateAll() {
 
 	for _, sr := range updateList {
 		update(&sr)
+
+		// need to conform to reddit API cap
+		time.Sleep(time.Second * 2)
 	}
 }
