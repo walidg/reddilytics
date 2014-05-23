@@ -24,7 +24,7 @@ type SubredditData struct {
 func GetSubreddits() []Subreddit {
 	names := [...]string{
 		"golang",
-		// ... intentionally an array to add more later
+		// ... intentionally a slice to add more later
 	}
 
 	subreddits := []Subreddit{}
