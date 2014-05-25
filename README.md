@@ -12,6 +12,7 @@ which will likely be in some form of a web application).
 ---
 
 Sorted by Subscribers: 
+
 1. python (72185)
 2. javascript (46347)
 3. java (29663)
@@ -44,6 +45,7 @@ Sorted by Subscribers:
 
 
 Sorted By Average Percent Activity: 
+
 1. postscript (2.128 %)
 2. actionscript (1.333 %)
 3. pascal (0.948 %)
