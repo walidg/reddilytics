@@ -7,10 +7,13 @@ type Subreddit struct {
 }
 
 type SubredditData struct {
-	Display_name       string
+	Accounts_active int
+	Subscribers     int
+	Display_name    string
+	AverageActive   float32
+
+	/*  Unused fields
 	Url                string
-	Accounts_active    int
-	Subscribers        int
 	Public_description string
 	Description_html   string
 	Header_img         string
@@ -18,6 +21,7 @@ type SubredditData struct {
 	Title              string
 	Description        string
 	Name               string
+	*/
 }
 
 // returns list of subreddits to watch
