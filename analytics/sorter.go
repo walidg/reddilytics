@@ -7,11 +7,8 @@ import (
 
 // load most recent data.
 
-func Analyze() {
-	// load recent data
-	if subreddits, err := getRecentData(); err != nil {
-		panic(err)
-	}
+func Analyze() string {
+	return ""
 }
 
 func sortBySubs(*[]model.Subreddit) {
