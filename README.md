@@ -12,8 +12,6 @@ which will likely be in some form of a web application).
 
 #### Results of Common programming language Reddit community rankings: 
 
-===========
-
 Sorted by Subscribers: 
 
 1. python (72185)
