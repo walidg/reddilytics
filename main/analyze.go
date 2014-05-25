@@ -1,11 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"github.com/steaz/reddilytics/analytics"
+	"github.com/steaz/reddilytics/model"
+	"log"
 )
 
 func main() {
-	results := analytics.Analyze()
-	fmt.Println(results)
+	err := model.SetupDB()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	analytics.Analyze()
 }

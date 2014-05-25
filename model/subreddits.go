@@ -1,16 +1,21 @@
 package model
 
+import (
+	"fmt"
+)
+
 // structs match reddit API @ www.reddit.com/subreddit/about.json
 type Subreddit struct {
-	Data SubredditData
 	Name string
+	Data SubredditData
 }
 
 type SubredditData struct {
 	Accounts_active int
 	Subscribers     int
 	Display_name    string
-	AverageActive   float32
+	AverageActive   int
+	PercentActive   float32
 
 	/*  Unused fields
 	Url                string
@@ -22,6 +27,17 @@ type SubredditData struct {
 	Description        string
 	Name               string
 	*/
+}
+
+func (sr Subreddit) String() string {
+	return fmt.Sprintf("%s - Subs: %d, AvgActive: %d, PercentActive: %.05f",
+		sr.Name, sr.Data.Subscribers, sr.Data.AverageActive, sr.Data.PercentActive)
+}
+
+func (sr Subreddit) CalcPercentActive() {
+
+	sr.Data.PercentActive = 100.0 * float32(sr.Data.Accounts_active/sr.Data.Subscribers)
+	fmt.Printf("%f\n", sr.Data.PercentActive)
 }
 
 // returns list of subreddits to watch

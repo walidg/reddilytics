@@ -2,29 +2,36 @@ package analytics
 
 import (
 	"fmt"
-	"github.com/reddilytics/model"
+	"github.com/steaz/reddilytics/model"
+	"sort"
 )
 
 // load most recent data.
 
-func Analyze() string {
-	return ""
+func Analyze() {
+	subreddits := model.LoadAll()
+
+	sort.Sort(BySubs(subreddits))
+	fmt.Println("Sorted by Subscribers: ")
+	for i, sr := range subreddits {
+		fmt.Printf("%d.) %s (%d)\n", i+1, sr.Name, sr.Data.Subscribers)
+	}
+
+	sort.Sort(ByActivity(subreddits))
+	fmt.Println("\n\nSorted By Average Percent Activity: ")
+	for i, sr := range subreddits {
+		fmt.Printf("%d.) %s (%.03f %%)\n", i+1, sr.Name, sr.Data.PercentActive)
+	}
 }
 
-func sortBySubs(*[]model.Subreddit) {
+type BySubs []model.Subreddit
 
-}
+func (a BySubs) Len() int           { return len(a) }
+func (a BySubs) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a BySubs) Less(i, j int) bool { return a[i].Data.Subscribers > a[j].Data.Subscribers }
 
-func sortByActivity(*[]model.Subreddit) {
-	// this is more complicated, because I need the average
-	// activity over time (past 10 days?), not a simple most recent entry pull
+type ByActivity []model.Subreddit
 
-}
-
-func calcActivity(sr model.Subreddit) {
-	return averageActivity(sr model.Subreddit) / sr.Data.Subscribers
-}
-
-func averageActivity(sr model.Subreddit) {
-	// has to make a pull on the 10? most recent database entries
-}
+func (a ByActivity) Len() int           { return len(a) }
+func (a ByActivity) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a ByActivity) Less(i, j int) bool { return a[i].Data.PercentActive > a[j].Data.PercentActive }

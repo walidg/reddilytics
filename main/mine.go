@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/steaz/reddilytics/mining"
 	"github.com/steaz/reddilytics/model"
+	"log"
 	"time"
 )
 
@@ -11,7 +12,7 @@ func main() {
 	for {
 		err := model.SetupDB()
 		if err != nil {
-			panic(err)
+			log.Fatal(err)
 		}
 
 		mining.UpdateAll()
@@ -19,6 +20,6 @@ func main() {
 		fmt.Println("\n--------------------------------------\n")
 
 		//how often?
-		time.Sleep(time.Hour * 1)
+		time.Sleep(time.Hour * 4)
 	}
 }
