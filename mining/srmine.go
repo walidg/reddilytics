@@ -21,8 +21,8 @@ func update(sr *model.Subreddit) {
 
 	err = json.Unmarshal(body, &sr)
 	if err == nil {
-		fmt.Println("subreddit: ", sr.Data.Display_name, "\nsubscribers:", sr.Data.Subscribers, "\nactive:",
-			sr.Data.Accounts_active)
+		// can do this because sr implements Stringer interface in model/subreddits.go! cool.
+		fmt.Println(sr)
 	} else {
 		fmt.Println("error: ", err)
 	}
