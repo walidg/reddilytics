@@ -69,8 +69,10 @@ func GetSubreddits() []Subreddit {
 		"postscript",
 		"python",
 		"ruby",
+		"rust",
 		"scala",
 		"sql",
+		"swift",
 		"visualbasic",
 	}
 
