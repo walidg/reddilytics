@@ -12,7 +12,8 @@ which will likely be in some form of a web application).
 
 #### Results of Common programming language Reddit community rankings: 
 
-**Note, I added rust & swift to the list.  However, /r/iosprogramming was the subreddit for the objective-c community, so take that into consideration through the transition**
+
+** Note: I added rust & swift to the list.  However, /r/iosprogramming was the subreddit for the objective-c community, so take that into consideration through the transition **
 
 Sorted by Subscribers:
 
