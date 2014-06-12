@@ -12,16 +12,17 @@ func Analyze() {
 	subreddits := model.LoadAll()
 
 	sort.Sort(BySubs(subreddits))
-	fmt.Println("Sorted by Subscribers: ")
+	fmt.Println("Sorted by Subscribers: \n")
 	for i, sr := range subreddits {
-		fmt.Printf("%d.) %s (%d)\n", i+1, sr.Name, sr.Data.Subscribers)
+		fmt.Printf("%d. %s (%d)\n", i+1, sr.Name, sr.Data.Subscribers)
 	}
-
-	sort.Sort(ByActivity(subreddits))
-	fmt.Println("\n\nSorted By Average Percent Activity: ")
-	for i, sr := range subreddits {
-		fmt.Printf("%d.) %s (%.03f %%)\n", i+1, sr.Name, sr.Data.PercentActive)
-	}
+	/*
+		sort.Sort(ByActivity(subreddits))
+		fmt.Println("\n\nSorted By Average Percent Activity: \n")
+		for i, sr := range subreddits {
+			fmt.Printf("%d. %s (%.03f %%)\n", i+1, sr.Name, sr.Data.PercentActive)
+		}
+	*/
 }
 
 type BySubs []model.Subreddit
