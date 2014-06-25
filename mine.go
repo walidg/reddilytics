@@ -9,17 +9,12 @@ import (
 )
 
 func main() {
-	for {
-		err := model.SetupDB()
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		mining.UpdateAll()
-		fmt.Println("Done: ", time.Now())
-		fmt.Println("\n--------------------------------------\n")
-
-		//how often?
-		time.Sleep(time.Hour * 4)
+	err := model.SetupDB()
+	if err != nil {
+		log.Fatal(err)
 	}
+
+	mining.UpdateAll()
+	fmt.Println("Done: ", time.Now())
+	fmt.Println("\n--------------------------------------\n")
 }
