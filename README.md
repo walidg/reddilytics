@@ -4,8 +4,7 @@ reddilytics
 ### Summary
 
 This is a really cool project that I'm working on to gain familiarity with a few principles, namely working with json,
-accessing a third party API, connecting to a local database server (PostgreSQL), and, eventually, data visualization (
-which will likely be in some form of a web application). 
+accessing a third party API, connecting to a local database server (PostgreSQL), and, eventually, data visualization (which will likely be in some form of a web application). 
 
 ===========
 
@@ -17,37 +16,38 @@ Results of Common programming language Reddit community rankings:
 
 Sorted by Subscribers: 
 
-1. python (74199)
-2. javascript (47783)
-3. java (30554)
-4. php (29622)
-5. ruby (22994)
-6. cpp (21203)
-7. haskell (16298)
-8. csharp (13239)
-9. iosprogramming (11951)
-10. c_programming (10508)
-11. golang (9055)
-12. lisp (8626)
-13. perl (8288)
-14. dotnet (8253)
-15. sql (7160)
-16. scala (6054)
-17. matlab (5755)
-18. swift (4521)
-19. rust (4487)
-20. lua (2850)
-21. asm (2586)
-22. visualbasic (1455)
+1. python (74345)
+2. javascript (47887)
+3. java (30639)
+4. php (29698)
+5. ruby (23024)
+6. cpp (21250)
+7. haskell (16318)
+8. csharp (13265)
+9. iosprogramming (12008)
+10. c_programming (10527)
+11. golang (9097)
+12. lisp (8631)
+13. perl (8300)
+14. dotnet (8275)
+15. sql (7172)
+16. scala (6069)
+17. matlab (5771)
+18. swift (4589)
+19. rust (4519)
+20. lua (2858)
+21. asm (2591)
+22. visualbasic (1458)
 23. fsharp (1403)
-24. d_language (1381)
-25. julia (927)
-26. fortran (689)
+24. d_language (1380)
+25. julia (933)
+26. fortran (691)
 27. delphi (514)
-28. cobol (269)
+28. cobol (270)
 29. pascal (213)
 30. actionscript (147)
 31. postscript (47)
+
 
 
 
