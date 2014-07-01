@@ -1,0 +1,1 @@
+go run mine.go && go run analyze.go > README.md

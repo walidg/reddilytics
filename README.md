@@ -13,10 +13,9 @@ Results of Common programming language Reddit community rankings:
 
 
 ** Note: I added rust & swift to the list.  However, /r/iosprogramming was the subreddit for the objective-c community, so take that into consideration through the transition **
-
 Sorted by Subscribers: 
 
-1. python (74402)
+1. python (74403)
 2. javascript (47941)
 3. java (30663)
 4. php (29716)
@@ -28,11 +27,11 @@ Sorted by Subscribers:
 10. c_programming (10532)
 11. golang (9114)
 12. lisp (8636)
-13. perl (8303)
+13. perl (8304)
 14. dotnet (8284)
 15. sql (7192)
 16. scala (6077)
-17. matlab (5783)
+17. matlab (5784)
 18. swift (4631)
 19. rust (4559)
 20. lua (2861)
@@ -47,11 +46,3 @@ Sorted by Subscribers:
 29. pascal (213)
 30. actionscript (147)
 31. postscript (47)
-
-
-
-### Future additions/Todos:
-
- - Rank by daily growth
- - Query collected data (search algorithm)
- - Gather data on comments/posts to provide insight into subreddit activity
