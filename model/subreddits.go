@@ -46,6 +46,7 @@ func GetSubreddits() []Subreddit {
 		"actionscript",
 		"asm",
 		"c_programming",
+		"clojure",
 		"cobol",
 		"cpp",
 		"csharp",
