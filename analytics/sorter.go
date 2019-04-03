@@ -2,7 +2,7 @@ package analytics
 
 import (
 	"fmt"
-	"github.com/steaz/reddilytics/model"
+	"github.com/walidg/reddilytics/model"
 	"sort"
 )
 

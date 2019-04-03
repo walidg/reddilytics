@@ -3,7 +3,7 @@ package mining
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/steaz/reddilytics/model"
+	"github.com/walidg/reddilytics/model"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -12,17 +12,33 @@ import (
 // mines the data from the reddit API and calls save
 func update(sr *model.Subreddit) {
 	url := "http://www.reddit.com/r/" + sr.Name + "/about.json"
-	res, err := http.Get(url)
+	//res, err := http.Get(url)
+	client := &http.Client{}
+	req, err := http.NewRequest("GET", url, nil)
+	req.Header.Add("User-Agent", "myClient")
+	res, err := client.Do(req)
+	defer res.Body.Close()
+
 	if err != nil {
 		panic(err)
 	}
-	defer res.Body.Close()
+	
 	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		panic(err)
+	}
+	
+	/*
+	err = ioutil.WriteFile(sr.Name + ".json", body, 0666)
+	if err != nil {
+		panic(err)
+	}
+	*/
 
 	err = json.Unmarshal(body, &sr)
 	if err == nil {
 		// can do this because sr implements Stringer interface in model/subreddits.go! cool.
-		fmt.Println(sr)
+		//fmt.Println(sr)
 	} else {
 		fmt.Println("error: ", err)
 	}
